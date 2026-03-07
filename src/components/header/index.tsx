@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function Header() {
     const isMobile = useIsMobile()
     return (
-        <header className="fixed top-0 left-0 w-full flex justify-between items-center backdrop-blur-sm z-50 py-4 px-6">
+        <header className="fixed h-16 top-0 left-0 w-full flex justify-between items-center backdrop-blur-sm z-50">
             <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
                 <Logo />
                 {isMobile ? <Menu className="w-6 h-6 text-primary" /> :
