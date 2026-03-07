@@ -4,6 +4,7 @@ import Icon from "../shared/Icon"
 import AvatarGlow from "../shared/AvatarGlow"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
+import image from '@/assets/image.png'
 
 export default function HomeSection() {
     const isMobile = useIsMobile()
@@ -26,7 +27,7 @@ export default function HomeSection() {
                     </button>
                 </div>
             </div>
-            <AvatarGlow src="src/assets/image.png" alt="My Avatar" />
+            <AvatarGlow src={image} alt="My Avatar" />
         </section >
     )
 }
