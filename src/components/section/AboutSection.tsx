@@ -10,11 +10,12 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
+import image from '@/assets/image.png'
 export default function AboutSection() {
     const isMobile = useIsMobile()
     return (
         <section id="about" className="lg:flex-row lg:gap-40 gap-6 md:gap-15 min-h-screen flex flex-col items-center justify-center">
-            <AvatarGlow src="src/assets/image.png" alt="My Avatar" />
+            <AvatarGlow src={image} alt="My Avatar" />
             <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
                 <h2 className="text-3xl md:text-5xl">
                     About <GradientText>Me</GradientText>
