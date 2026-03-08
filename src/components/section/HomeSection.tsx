@@ -5,14 +5,17 @@ import AvatarGlow from "../shared/AvatarGlow"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import image from '@/assets/image.png'
+import { motion } from "motion/react"
+import { TypingH3 } from "../shared/TypingH3"
+
 
 export default function HomeSection() {
     const isMobile = useIsMobile()
     return (
         <section id="home" className="flex my-6 flex-col-reverse lg:flex-row lg:gap-40 gap-6 md:gap-20 justify-center items-center min-h-screen">
             <div className="text-center lg:text-right">
-                <h1 className="text-3xl md:text-5xl">Hi, It's <GradientText>Hai</GradientText></h1>
-                <h3 className="text-xl md:text-3xl">I'm a <GradientText>Web Developer</GradientText></h3>
+                <h1 className="text-3xl md:text-5xl font-bold">Hi, It's <GradientText>Hai</GradientText></h1>
+                <TypingH3/>
                 <p className="max-w-lg mt-2 text-slate-300 leading-relaxed text-sm md:text-[16px]">As a programmer, I love solving problems through lines of code. I don't just write code, I build seamless digital experiences.</p>
                 <div className="text-primary flex flex-row space-x-3 items-center justify-center lg:justify-end my-4">
                     <Icon><FaGithub size={20} /></Icon>
@@ -27,7 +30,13 @@ export default function HomeSection() {
                     </button>
                 </div>
             </div>
-            <AvatarGlow src={image} alt="My Avatar" />
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
+                <AvatarGlow src={image} alt="My Avatar" />
+            </motion.div>
         </section >
     )
 }

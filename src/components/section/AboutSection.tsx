@@ -11,6 +11,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import image from '@/assets/image.png'
+import { motion } from "motion/react";
 export default function AboutSection() {
     const isMobile = useIsMobile()
     return (
@@ -36,46 +37,54 @@ export default function AboutSection() {
                             Read More
                         </button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-175 bg-card border-zinc-800 text-card-foreground outline-none">
-                        <DialogHeader className="select-none text-left">
-                            <DialogTitle className="text-3xl font-bold mb-2">
-                                More About My <span className="text-primary">Journey</span>
-                            </DialogTitle>
-                            <DialogDescription className="text-muted-foreground text-base">
-                                A quick look at my skills and what I bring to the table.
-                            </DialogDescription>
-                        </DialogHeader>
-
-                        <div className="select-none space-y-6 mt-2 text-left text-sm md:text-base">
-                            <p className="leading-relaxed text-zinc-300">
-                                With a strong foundation in both frontend and backend development, I enjoy taking a product from concept to deployment. I thrive in environments where I can solve complex logical problems while ensuring a seamless user experience.
-                            </p>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="p-5 rounded-xl bg-zinc-900/50 border border-primary/30 hover:border-primary transition-colors group">
-                                    <h3 className="font-bold text-primary mb-2 text-lg flex items-center gap-2">
-                                        <span className="group-hover:animate-bounce">🎨</span> Frontend
-                                    </h3>
-                                    <p className="text-zinc-400 leading-relaxed">React, Next.js, Tailwind CSS, TypeScript, Redux</p>
+                    <DialogContent className="max-w-sm max-h-[90vh] md:max-w-md lg:max-w-lg bg-card p-0 border-zinc-800 outline-none border-none">
+                        <motion.div
+                            initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [0.16, 1, 0.3, 1]
+                            }}
+                            className="p-6 overflow-y-auto"
+                        >
+                            <DialogHeader className="select-none text-left">
+                                <DialogTitle className="text-3xl font-bold mb-2">
+                                    More About My <span className="text-primary">Journey</span>
+                                </DialogTitle>
+                                <DialogDescription className="text-muted-foreground text-base">
+                                    A quick look at my skills and what I bring to the table.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <div className="select-none space-y-6 mt-2 text-left text-sm md:text-base">
+                                <p className="leading-relaxed text-zinc-300">
+                                    With a strong foundation in both frontend and backend development, I enjoy taking a product from concept to deployment. I thrive in environments where I can solve complex logical problems while ensuring a seamless user experience.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="p-5 rounded-xl bg-zinc-900/50 border border-primary/30 hover:border-primary transition-colors group">
+                                        <h3 className="font-bold text-primary mb-2 text-lg flex items-center gap-2">
+                                            <span className="group-hover:animate-bounce">🎨</span> Frontend
+                                        </h3>
+                                        <p className="text-zinc-400 leading-relaxed">React, Next.js, Tailwind CSS, TypeScript, Redux</p>
+                                    </div>
+                                    <div className="p-5 rounded-xl bg-zinc-900/50 border border-primary/30 hover:border-primary transition-colors group">
+                                        <h3 className="font-bold text-primary mb-2 text-lg flex items-center gap-2">
+                                            <span className="group-hover:animate-bounce">⚙️</span> Backend
+                                        </h3>
+                                        <p className="text-zinc-400 leading-relaxed">Node.js, Express, PostgreSQL, MongoDB, RESTful APIs</p>
+                                    </div>
                                 </div>
-                                <div className="p-5 rounded-xl bg-zinc-900/50 border border-primary/30 hover:border-primary transition-colors group">
-                                    <h3 className="font-bold text-primary mb-2 text-lg flex items-center gap-2">
-                                        <span className="group-hover:animate-bounce">⚙️</span> Backend
-                                    </h3>
-                                    <p className="text-zinc-400 leading-relaxed">Node.js, Express, PostgreSQL, MongoDB, RESTful APIs</p>
+                                <div className="pt-4 flex justify-end">
+                                    <a
+                                        href="./Hai-Nguyen-CV.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:shadow-[0_0_10px_0] shadow-primary"
+                                    >
+                                        Download CV
+                                    </a>
                                 </div>
                             </div>
-                            <div className="pt-4 flex justify-end">
-                                <a
-                                    href="./Hai-Nguyen-CV.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:shadow-[0_0_10px_0] shadow-primary"
-                                >
-                                    Download CV
-                                </a>
-                            </div>
-                        </div>
+                        </motion.div>
                     </DialogContent>
                 </Dialog>
             </div>
