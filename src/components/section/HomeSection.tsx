@@ -18,16 +18,20 @@ export default function HomeSection() {
                 <TypingH3/>
                 <p className="max-w-lg mt-2 text-slate-300 leading-relaxed text-sm md:text-[16px]">As a programmer, I love solving problems through lines of code. I don't just write code, I build seamless digital experiences.</p>
                 <div className="text-primary flex flex-row space-x-3 items-center justify-center lg:justify-end my-4">
-                    <Icon><FaGithub size={20} /></Icon>
-                    <Icon><FaLinkedin size={20} /></Icon>
+                    <Icon onClick={() => window.open("https://github.com/HaiGH-Space", "_blank")}>
+                        <FaGithub size={20} />
+                    </Icon>
+                    <Icon onClick={() => window.open("https://www.linkedin.com/in/h%E1%BA%A3i-nguy%E1%BB%85n-686908382/", "_blank")}>
+                        <FaLinkedin size={20} />
+                    </Icon>
                 </div>
                 <div className="space-x-2">
-                    <button className={cn(isMobile ? "text-sm px-2 py-1" : "px-4 py-2", "font-bold border-2 rounded-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_25px_0] text-black bg-primary border-none cursor-pointer shadow-[0_0_10px_0] shadow-primary")}>
-                        Hire Me
-                    </button>
-                    <button className={cn(isMobile ? "text-sm px-2 py-1" : "px-4 py-2", "font-bold border-primary border-2 bg-transparent text-primary rounded-full duration-300 hover:shadow-[0_0_10px_0] hover:text-black hover:bg-primary cursor-pointer shadow-primary")}>
+                    <a href={`${import.meta.env.BASE_URL}/Hai-Nguyen-CV.pdf`} target="_blank" rel="noopener noreferrer" className={cn(isMobile ? "text-sm px-2 py-1" : "px-4 py-2", "font-bold border-2 rounded-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_25px_0] text-black bg-primary border-none cursor-pointer shadow-[0_0_10px_0] shadow-primary")}>
+                        Resume
+                    </a>
+                    <a href="#contact" className={cn(isMobile ? "text-sm px-2 py-1" : "px-4 py-2", "font-bold border-primary border-2 bg-transparent text-primary rounded-full duration-300 hover:shadow-[0_0_10px_0] hover:text-black hover:bg-primary cursor-pointer shadow-primary")}>
                         Contact
-                    </button>
+                    </a>
                 </div>
             </div>
             <motion.div

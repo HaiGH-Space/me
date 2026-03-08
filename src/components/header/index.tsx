@@ -1,6 +1,5 @@
 import { Menu } from "lucide-react";
 import Logo from "./Logo";
-import { Button } from "../ui/button";
 import Navigation from "./Navigation";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion, type Variants } from "motion/react";
@@ -30,7 +29,7 @@ export default function Header() {
                 {isMobile ? <Menu className="w-6 h-6 text-primary" /> :
                     <>
                         <Navigation />
-                        <Button className="cursor-pointer text-nowrap from-10% to-100% bg-linear-270 from-primary to-[#ff1d15]">Contact me</Button>
+                        <a href="#contact" className="rounded-full py-1 px-2 cursor-pointer text-nowrap from-10% to-100% bg-linear-270 from-primary to-[#ff1d15]">Make an Offer</a>
                     </>
                 }
             </div>

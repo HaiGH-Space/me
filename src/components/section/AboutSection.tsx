@@ -75,7 +75,7 @@ export default function AboutSection() {
                                 </div>
                                 <div className="pt-4 flex justify-end">
                                     <a
-                                        href="./Hai-Nguyen-CV.pdf"
+                                        href={`${import.meta.env.BASE_URL}/Hai-Nguyen-CV.pdf`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:shadow-[0_0_10px_0] shadow-primary"
