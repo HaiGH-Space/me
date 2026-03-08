@@ -2,6 +2,7 @@ import Header from "./components/header";
 import { ThemeProvider } from "@/components/theme-provider"
 import HomeSection from "./components/section/HomeSection";
 import AboutSection from "./components/section/AboutSection";
+import ContactSection from "./components/section/ContactSection";
 import { motion, type Variants } from "motion/react"
 import SectionAnimation from "./components/shared/SectionAnimation";
 
@@ -27,6 +28,9 @@ export function App() {
                 </SectionAnimation>
                 <SectionAnimation isScrolled={true}>
                     <AboutSection />
+                </SectionAnimation>
+                <SectionAnimation isScrolled={true}>
+                    <ContactSection />
                 </SectionAnimation>
             </motion.main>
         </ThemeProvider>

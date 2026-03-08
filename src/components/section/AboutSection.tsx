@@ -37,7 +37,7 @@ export default function AboutSection() {
                             Read More
                         </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-sm max-h-[90vh] md:max-w-md lg:max-w-lg bg-card p-0 border-zinc-800 outline-none border-none">
+                    <DialogContent className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-card p-0 border-zinc-800 outline-none border-none">
                         <motion.div
                             initial={{ opacity: 0, y: 40, scale: 0.98 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -45,7 +45,7 @@ export default function AboutSection() {
                                 duration: 0.5,
                                 ease: [0.16, 1, 0.3, 1]
                             }}
-                            className="p-6 overflow-y-auto"
+                            className="max-h-[90vh] p-6 overflow-y-auto"
                         >
                             <DialogHeader className="select-none text-left">
                                 <DialogTitle className="text-3xl font-bold mb-2">
