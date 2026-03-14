@@ -12,7 +12,7 @@ import { TypingH3 } from "../shared/TypingH3"
 export default function HomeSection() {
     const isMobile = useIsMobile()
     return (
-        <section id="home" className="flex my-6 flex-col-reverse lg:flex-row lg:gap-40 gap-6 md:gap-20 justify-center items-center min-h-screen">
+        <section id="home" className="flex my-6 flex-col-reverse lg:flex-row lg:gap-44 gap-6 md:gap-20 justify-center items-center min-h-screen">
             <div className="text-center lg:text-right">
                 <h1 className="text-3xl md:text-5xl font-bold">Hi, It's <GradientText>Hai</GradientText></h1>
                 <TypingH3/>

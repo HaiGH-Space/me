@@ -5,6 +5,7 @@ export default function Navigation() {
     <nav className="md:text-base lg:text-lg space-x-16 font-medium">
       <NavItem href="#home">Home</NavItem>
       <NavItem href="#about">About</NavItem>
+      <NavItem href="#projects">Projects</NavItem>
       <NavItem href="#contact">Contact</NavItem>
     </nav>
   )
