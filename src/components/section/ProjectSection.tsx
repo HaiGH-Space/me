@@ -86,7 +86,7 @@ export default function ProjectSection() {
     return (
         <section
             id="projects"
-            className=" min-h-screen flex flex-col items-center justify-center gap-8 md:gap-12 py-8"
+            className="scroll-mt-12 min-h-screen flex flex-col items-center justify-center gap-8 md:gap-12 py-8"
         >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

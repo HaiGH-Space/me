@@ -2,7 +2,7 @@ import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 export default function Navigation() {
   return (
-    <nav className="md:text-base lg:text-lg space-x-16 font-medium">
+    <nav className="md:text-base lg:text-lg md:space-x-8 lg:space-x-16 font-medium">
       <NavItem href="#home">Home</NavItem>
       <NavItem href="#about">About</NavItem>
       <NavItem href="#projects">Projects</NavItem>
