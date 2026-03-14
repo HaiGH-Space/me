@@ -128,7 +128,7 @@ export default function ContactSection() {
 	return (
 		<section
 			id="contact"
-			className="scroll-mt-12 min-h-screen flex flex-col items-center justify-center gap-6 md:gap-12 py-6"
+			className="scroll-mt-10 md:scroll-mt-0 min-h-screen flex flex-col items-center justify-center gap-6 md:gap-12 py-6"
 		>
 			<div className="flex flex-col text-center items-center">
 				<h2 className="text-3xl md:text-5xl">
