@@ -162,7 +162,8 @@ export default function ProjectSection() {
                                         type="button"
                                         className="inline-flex w-fit items-center gap-2 text-sm font-bold px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer"
                                     >
-                                        View Details <ArrowUpRight size={16} />
+                                        View Details 
+                                        {/* <ArrowUpRight size={16} /> */}
                                     </button>
                                 </DialogTrigger>
                                 <DialogContent className="max-w-xs sm:max-w-sm md:max-w-2xl bg-card p-0 border-zinc-800 outline-none border">
