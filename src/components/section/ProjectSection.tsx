@@ -28,6 +28,40 @@ type Project = {
 
 const projects: Project[] = [
     {
+        title: "Sync Flow",
+        period: "2026 - Present",
+        role: "Full-Stack Developer",
+        description:
+            "Enterprise Agile project management and team collaboration platform built as a Jira/Linear-style system. It combines workspace/project/sprint/issue planning with role-based access control, comment threads, and contextual meetings tied to issues, plus an interactive Kanban dashboard UI.",
+        stack: [
+            "TypeScript",
+            "NestJS",
+            "Prisma ORM",
+            "PostgreSQL",
+            "Next.js",
+            "React",
+            "TanStack Query",
+            "Zustand",
+            "Zod",
+            "Tailwind CSS",
+            "next-intl",
+            "Swagger/Scalar API Docs"
+        ],
+        highlights: [
+            "Designed a hierarchical domain model: Workspace -> Project -> Sprint/Column -> Issue -> Comment, with contextual Meeting support.",
+            "Implemented secure session-cookie authentication (register/login, hashed passwords, DB-backed sessions, expiry handling) and email verification/invitation token flows.",
+            "Built layered authorization with custom guards (session auth, workspace roles, project access, issue access) to enforce RBAC and deep membership checks before child-entity actions.",
+            "Created strict DTO-based validation with class-validator and standardized API response/error structures via interceptor + centralized error codes.",
+            "Implemented project-scoped issue numbering and default Kanban column bootstrapping when creating new projects.",
+            "Built a modern frontend dashboard with workspace rail, project/sprint sidebar, and board navigation modes (Board, Backlog, Planning, Timeline).",
+            "Implemented drag-and-drop Kanban interactions with optimistic cache updates and debounced persistence for column reorder and issue movement.",
+            "Added i18n routing (EN/VI), protected route middleware based on session cookie, and API proxy rewrite for FE-BE integration."
+        ],
+        sourceCodeUrl: "https://github.com/HaiGH-Space/Sync-Flow",
+        demoUrl: "https://sync-flow-mocha.vercel.app/",
+        status: "In Progress"
+    },
+    {
         title: "E-Commerce Platform",
         period: "Mar 2025 - May 2025",
         role: "Contributor",
@@ -93,7 +127,15 @@ export default function ProjectSection() {
                             </Badge>
                         </div>
 
-                        <p className="text-zinc-400 text-sm md:text-base leading-relaxed mt-3 min-h-18">
+                        <p
+                            className="text-zinc-400 text-sm md:text-base leading-relaxed mt-3 h-32"
+                            style={{
+                                display: "-webkit-box",
+                                WebkitLineClamp: isMobile ? 6 : 5,
+                                WebkitBoxOrient: "vertical",
+                                overflow: "hidden",
+                            }}
+                        >
                             {project.description}
                         </p>
 
